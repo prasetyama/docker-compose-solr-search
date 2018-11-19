@@ -1,0 +1,17 @@
+<dataConfig>
+    <dataSource driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost/nama_database" user="root" password="root" />
+    <document>
+        <entity name="can_products" pk="id" query="SELECT p.id, p.name, p.seo, p.price, p.manufactur, p.composition, p.brand_name, p.id_new_category, c.name AS new_category_name, c.slug from can_products p INNER JOIN can_new_categories c ON p.id_new_category = c.id WHERE p.deleted = 0 AND p.is_hidden != 1">
+            <field column="id" name="id" />
+            <field column="name" name="name" />
+            <field column="seo" name="seo" />
+            <field column="price" name="price" />
+			      <field column="calories" name="calories" />
+			      <field column="manufactur" name="manufactur" />
+			      <field column="composition" name="composition" />
+            <field column="brand_name" name="brand_name" />
+            <field column="new_category_name" name="new_category_name" />
+            <field column="slug" name="slug" />
+        </entity>
+    </document>
+</dataConfig>

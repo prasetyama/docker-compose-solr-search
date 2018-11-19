@@ -1,0 +1,12 @@
+version: '2'
+services:
+  solr:
+    image: solr
+    ports:
+     - "8983:8983"
+    volumes:
+      - ./main:/opt/solr/server/solr/gettingstarted
+    entrypoint:
+      - docker-entrypoint.sh
+      - solr-precreate
+      - mycore
