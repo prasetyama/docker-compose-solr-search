@@ -1,4 +1,4 @@
-# docker-compose-solr-search
+# Docker Compose Solr Search
 
 RUN DOCKER 
 - docker-compose up -d --build
